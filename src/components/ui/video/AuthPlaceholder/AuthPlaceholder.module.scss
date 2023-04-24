@@ -1,0 +1,9 @@
+.placeholder{
+	@apply flex flex-col p-2 rounded-lg  items-center justify-center mt-10 mb-6 z-3 w-full absolute top-0 left-0 h-full bg-gray-800;
+	>p{
+		@apply text-white text-center mb-4 text-lg;
+	}
+	.btn{
+		@apply btn-primary px-7 py-3 text-lg;
+	}
+}

@@ -1,0 +1,30 @@
+.upload {
+	&__field {
+		@apply relative animate-fade mt-10 w-full;
+	}
+	&__flex {
+		@apply flex justify-around;
+		> label {
+			@apply block mr-10;
+			> span {
+				@apply uppercase text-xs text-gray-600 block mb-4;
+			}
+			> input {
+				@apply block w-full text-sm text-gray-300 file:mr-4 file:py-2  file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary opacity-70 file:text-white transition-opacity hover:opacity-100;
+			}
+		}
+		> .error {
+			@apply relative -bottom-3;
+		}
+	}
+
+	&__container {
+		@apply relative  overflow-hidden rounded-image;
+	   width: 200px;
+		 height: 200px;
+
+		> img {
+			@apply object-cover object-center;
+		}
+	}
+}

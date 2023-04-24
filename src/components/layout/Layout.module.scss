@@ -1,0 +1,43 @@
+$bar-width: 25%;
+
+.layout {
+	position: relative;
+
+	> div:first-child,
+	> div:last-child {
+		@apply fixed top-0 bottom-0 overflow-y-scroll overflow-x-hidden;		width: $bar-width;
+		
+		&::-webkit-scrollbar-track {
+			--webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			border-radius: 10px;
+			background-color: #f5f5f5;
+		}
+
+		&::-webkit-scrollbar {
+			width: 5px;
+			background-color: #f5f5f5;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			--webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			background-color: rgba(32, 35, 32,.8);
+		}
+	}
+
+	> div:first-child {
+		left: 0;
+	
+	
+	}
+	> div:last-child {
+		right: 0;
+		box-shadow: 0 0 0 8px hsl(0deg 0% 100% / 5%);
+		-webkit-box-shadow: 0 0 0 8px hsl(0deg 0% 100% / 10%);
+	}
+
+	.content {
+		@apply min-h-screen p-layout;
+		margin: 0 $bar-width;
+	}
+}

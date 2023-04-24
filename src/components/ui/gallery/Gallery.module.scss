@@ -1,0 +1,51 @@
+@import '../../../styles/variables';
+
+.gallery {
+	@apply flex items-stretch overflow-x-auto flex-nowrap py-3;	
+	--webkit-overflow-scrolling: touch;
+   
+	&::-webkit-scrollbar{
+		display: none;
+	}
+
+	&__item {
+		@apply relative transition-transform flex items-end shadow-lg rounded-layout overflow-hidden;
+		flex: 0 0 auto;
+		&:hover {
+			transform: translateY(-5px);
+		}
+
+		&.vertical {
+			@apply mr-4 last:mr-0 w-1/5 h-72 rounded-layout;
+			max-width: 200px;
+			width: 100%;
+		}
+
+		&.horizontal {
+			@apply mb-8;
+			width: 31%;
+		}
+
+		&.withtext {
+			@include fade-bg-gradient(0deg);
+			@apply rounded-layout;
+		}
+
+		img {
+		  	display: block;
+		   object-fit: cover;
+			 object-position:top;
+			  pointer-events: none;
+		}
+	}
+
+	&__content {
+		@apply absolute bottom-1 left-0 z-2 text-center m-3 w-full;
+	}
+	&__title {
+		@apply text-white font-semibold text-shadow mb-1;
+	}
+	&__subtitle {
+		@apply text-gray-500 text-shadow;
+	}
+}

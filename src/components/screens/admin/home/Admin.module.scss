@@ -1,0 +1,57 @@
+.statisticks {
+	@apply animate-fade;
+	display: flex;
+	gap: 30px;
+	align-items: stretch;
+	justify-content: center;
+	width: 100%;
+	margin-top: 30px;
+
+	&__item {
+		flex: 0 0 45%;
+		padding: 10px;
+		background: rgba(20, 20, 20, 0.4);
+		backdrop-filter: blur(10px);	
+   	border-radius: 15px;
+		border: 1px solid rgba(43, 43, 43, 0.568);
+		box-shadow: 0 0 0 8px hsl(0deg 0% 100% / 5%);
+		-webkit-box-shadow: 0 0 0 8px hsl(0deg 0% 100% / 10%);
+	}
+
+	&__block {	
+	
+	> div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: 100%;
+			>span{
+				 @apply text-white font-bold text-xl first:text-5xl last:text-primary mb-2;
+			}
+		
+		}
+	}
+	&__popularItem {
+		@apply flex flex-center-col;	
+		.title{
+			@apply mb-5 text-white text-sm font-bold mt-5;
+		}
+		>a{
+			@apply transition-opacity overflow-hidden rounded-layout;
+		  
+		}		
+	}
+
+	&__img{
+		@apply rounded-layout shadow-lg;
+		max-width: 200px;
+		display: block;
+		transition: all .4s ease;
+		&:hover{
+			 transform: scale(1.1);
+		   
+		}
+		
+	}
+}

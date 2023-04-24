@@ -1,0 +1,38 @@
+.actions{
+	@apply flex items-center;
+	>button{
+		@apply text-primary outline-border-none bg-transparent text-xl opacity-80 transition-opacity hover:opacity-100 first:mr-4;		
+	}
+}
+
+.item{
+	@apply flex items-center justify-between bg-gray-800 bg-opacity-20 mt-4 px-5 text-white rounded-lg hover:bg-opacity-80;
+	>div{
+		@apply text-white text-opacity-80 py-3;
+		width: 44%;
+		&:nth-child(3){
+			@apply text-right justify-end;
+		}
+		&:nth-child(2){
+			@apply flex items-center justify-center text-center;
+		}
+		&:last-child{
+			@apply text-right justify-end;
+		}
+	}
+}
+
+.itemheader{
+	@apply bg-primary bg-opacity-60 shadow-lg mt-8;
+	>div{
+		@apply text-opacity-80 font-semibold py-2.5;
+
+	}
+}
+.notfound{
+	@apply text-white text-lg text-opacity-60 text-center py-3;
+}
+
+.table{
+	@apply animate-fade;
+}

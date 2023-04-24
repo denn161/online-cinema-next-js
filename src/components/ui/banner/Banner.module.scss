@@ -1,0 +1,10 @@
+@import '../../../styles/variables'; 
+
+.banner{
+	@apply relative overflow-hidden w-full min-h-max rounded-layout shadow-lg flex flex-col justify-end ;
+	@include fade-bg-gradient();
+
+	>img{
+		 @apply block image-like-bg object-top;
+	}
+}

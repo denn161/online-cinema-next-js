@@ -1,0 +1,64 @@
+.movies{
+
+	&__list{
+		@apply flex-start-col gap-3 mt-8 animate-fade mb-8;
+
+		.heading{
+			 @apply font-bold text-white text-xl capitalize mb-5;
+		}
+
+	}
+
+	&__btn{
+		@apply p-2.5 mt-3 btn-primary block text-center w-full;
+	}
+
+	&__item{
+    display: flex;
+		align-items: stretch;
+		gap: 10px;
+
+		img{
+			@apply rounded-image transition-colors border-transparent border;
+		   max-width:85px;
+			display: block;
+			height: 100px;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&:hover{
+			 img{
+				 @apply border-primary;
+			 }
+		}
+
+		>div{
+			@apply flex flex-col justify-between;
+			width: 67%;
+
+		}
+
+	}
+
+	&__title{
+		 @apply text-white text-lg font-medium truncate;
+	}
+
+	&__genres{
+		  @apply flex items-center gap-2;
+			>span{
+				@apply inline-block text-gray-600;
+			}
+	}
+
+	&__rating{
+		 @apply flex items-center ml-2;
+
+		 >svg{
+			@apply fill-yellow-700 mr-2 text-lg;
+		 }
+	}
+
+	
+}
